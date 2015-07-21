@@ -7,6 +7,6 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 5050
 
-VOLUME ["/config", "/movies", "/data/complete"]
+VOLUME ["/CouchPotato_data", "/movies", "/data/complete"]
 
-ENTRYPOINT ["python", "/CouchPotatoServer/CouchPotato.py", "--data_dir", "/config"]
+ENTRYPOINT ["python", "/CouchPotatoServer/CouchPotato.py", "--data_dir", "/CouchPotato_data"]
