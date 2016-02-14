@@ -1,9 +1,7 @@
-FROM ubuntu
+FROM alpine
 
-RUN apt-get install -y git-core python
+RUN apk add  --update git python && rm -rf /var/cache/apk/*
 RUN git clone https://github.com/RuudBurger/CouchPotatoServer.git /CouchPotatoServer
-RUN apt-get clean
-RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 5050
 
